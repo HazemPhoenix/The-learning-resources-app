@@ -1,34 +1,19 @@
 <template>
   <TheHeader />
-  <LearningResources :learning-resources="learningResources" />
+  <TheResources class="mb-5" align-buttons="center" />
 </template>
 
 <script>
 import TheHeader from "./components/layouts/TheHeader.vue";
-import LearningResources from "./components/learning-resources/LearningResources.vue";
+import TheResources from "./components/layouts/TheResources.vue";
 
 export default {
   components: {
-    LearningResources,
     TheHeader,
+    TheResources,
   },
   data() {
-    return {
-      learningResources: [
-        {
-          id: 1,
-          title: "Vue.js official docs",
-          description: "The official documentation for Vue.js",
-          link: "https://vuejs.org",
-        },
-        {
-          id: 2,
-          title: "Maxmilian Schwarzmuller Vue.js course",
-          description: "The udemy course on Vue.js by Maxmilian Schwarzmuller",
-          link: "https://www.udemy.com/course/vuejs-2-the-complete-guide/",
-        },
-      ],
-    };
+    return {};
   },
 };
 </script>

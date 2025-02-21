@@ -1,7 +1,5 @@
 <template>
-  <li
-    class="flex flex-col justify-between w-full rounded overflow-hidden shadow-lg bg-white hover:shadow-xl transition-shadow duration-300"
-  >
+  <li class="w-full">
     <BaseCard>
       <template #default>{{ item.title }}</template>
       <template #description>{{ item.description }}</template>
