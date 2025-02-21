@@ -1,8 +1,16 @@
 <template>
   <BaseCard align-buttons="center" class="mb-5">
     <template #buttons>
-      <BaseButton @click="changeSelectedTab('LearningResources')">Stored Resources</BaseButton>
-      <BaseButton @click="changeSelectedTab('AddResources')">Add Resources</BaseButton>
+      <BaseButton
+        @click="changeSelectedTab('LearningResources')"
+        :color="selectedTab === 'LearningResources' ? 'bg-blue-950' : 'bg-blue-800'"
+        >Stored Resources</BaseButton
+      >
+      <BaseButton
+        @click="changeSelectedTab('AddResources')"
+        :color="selectedTab === 'AddResources' ? 'bg-blue-950' : 'bg-blue-800'"
+        >Add Resources</BaseButton
+      >
     </template>
   </BaseCard>
   <KeepAlive>

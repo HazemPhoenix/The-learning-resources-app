@@ -46,6 +46,12 @@ export default {
         link: this.$refs.link.value,
       };
       this.addResource(res);
+      this.clearFields();
+    },
+    clearFields() {
+      this.$refs.title.value = "";
+      this.$refs.desc.value = "";
+      this.$refs.link.value = "";
     },
   },
 };
