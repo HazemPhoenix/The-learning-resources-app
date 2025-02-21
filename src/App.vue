@@ -1,15 +1,16 @@
 <template>
-  <ul class="flex flex-col items-center gap-3 w-10/12 sm:w-8/12 mx-auto">
-    <LearningResources :learning-resources="learningResources" />
-  </ul>
+  <TheHeader />
+  <LearningResources :learning-resources="learningResources" />
 </template>
 
 <script>
+import TheHeader from "./components/layout/TheHeader.vue";
 import LearningResources from "./components/learning-resources/LearningResources.vue";
 
 export default {
   components: {
     LearningResources,
+    TheHeader,
   },
   data() {
     return {
