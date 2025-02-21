@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ResourceItem from "./components/ResourceItem.vue";
+import ResourceItem from "./components/learning-resources/ResourceItem.vue";
 export default {
   components: {
     ResourceItem,
