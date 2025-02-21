@@ -8,7 +8,7 @@
         {{ item.description }}
       </p>
     </div>
-    <div class="px-6 pt-4 pb-6 flex flex-col sm:flex-row gap-3 border-1">
+    <div class="px-6 pt-4 pb-6 flex flex-col sm:flex-row gap-3">
       <a :href="item.link" target="_blank">
         <BaseButton class="w-full" />
       </a>

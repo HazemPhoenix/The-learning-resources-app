@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex flex-col items-center gap-3 border-1 w-10/12 sm:w-8/12 mx-auto">
+  <ul class="flex flex-col items-center gap-3 w-10/12 sm:w-8/12 mx-auto">
     <ResourceItem v-for="item in learningResources" :item="item" :key="item.id" />
   </ul>
 </template>
