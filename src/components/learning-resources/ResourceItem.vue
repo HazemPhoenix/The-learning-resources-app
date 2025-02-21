@@ -9,19 +9,20 @@
       </p>
     </div>
     <div class="px-6 pt-4 pb-6">
-      <a
-        :href="item.link"
-        target="_blank"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300"
-      >
-        Visit
+      <a :href="item.link" target="_blank">
+        <BaseButton />
       </a>
     </div>
   </li>
 </template>
 
 <script>
+import BaseButton from "../UI/BaseButton.vue";
+
 export default {
+  components: {
+    BaseButton,
+  },
   props: ["item"],
 };
 </script>
