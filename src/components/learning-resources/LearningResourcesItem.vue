@@ -16,14 +16,7 @@
 </template>
 
 <script>
-import BaseButton from "../UI/BaseButton.vue";
-import BaseCard from "../UI/BaseCard.vue";
-
 export default {
-  components: {
-    BaseButton,
-    BaseCard,
-  },
   props: ["item"],
 };
 </script>

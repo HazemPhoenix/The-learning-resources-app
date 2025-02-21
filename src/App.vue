@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import TheHeader from "./components/layout/TheHeader.vue";
+import TheHeader from "./components/layouts/TheHeader.vue";
 import LearningResources from "./components/learning-resources/LearningResources.vue";
 
 export default {
