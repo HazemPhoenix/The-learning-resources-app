@@ -8,10 +8,11 @@
         {{ item.description }}
       </p>
     </div>
-    <div class="px-6 pt-4 pb-6">
+    <div class="px-6 pt-4 pb-6 flex flex-col sm:flex-row gap-3">
       <a :href="item.link" target="_blank">
         <BaseButton />
       </a>
+      <BaseButton class="bg-red-500 hover:bg-red-700">Delete</BaseButton>
     </div>
   </li>
 </template>
