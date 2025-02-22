@@ -7,7 +7,9 @@
         <a :href="item.link" target="_blank">
           <BaseButton class="w-full" />
         </a>
-        <BaseButton class="bg-red-500 hover:bg-red-700">Delete</BaseButton>
+        <BaseButton class="bg-red-500 hover:bg-red-700" @click="deleteResource(item.title)"
+          >Delete</BaseButton
+        >
       </template>
     </BaseCard>
   </li>
@@ -15,6 +17,7 @@
 
 <script>
 export default {
+  inject: ["deleteResource"],
   props: ["item"],
 };
 </script>

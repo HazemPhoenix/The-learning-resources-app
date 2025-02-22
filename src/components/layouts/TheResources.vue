@@ -52,6 +52,7 @@ export default {
     return {
       learningResources: this.learningResources,
       addResource: this.addResource,
+      deleteResource: this.deleteResource,
     };
   },
   methods: {
@@ -60,6 +61,10 @@ export default {
     },
     addResource(resource) {
       this.learningResources.unshift(resource);
+    },
+    deleteResource(title) {
+      const idx = this.learningResources.findIndex((res) => res.title === title);
+      this.learningResources.splice(idx, 1);
     },
   },
 };
