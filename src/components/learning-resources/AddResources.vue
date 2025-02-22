@@ -28,23 +28,47 @@
     </div>
     <BaseButton type="submit" @click.prevent="submitHandler">Add</BaseButton>
   </form>
+  <BaseDialog v-if="!isValidInputs" @close="closeDialog">
+    <template #default>
+      <p>Please fill in all of the input fields before adding the resource.</p>
+    </template>
+    <template #actions>
+      <BaseButton @click="closeDialog">Close</BaseButton>
+    </template>
+  </BaseDialog>
 </template>
 
 <script>
 import BaseButton from "../UI/BaseButton.vue";
+import BaseDialog from "../UI/BaseDialog.vue";
 
 export default {
   components: {
     BaseButton,
+    BaseDialog,
   },
   inject: ["addResource"],
+  data() {
+    return {
+      isValidInputs: true,
+    };
+  },
   methods: {
     submitHandler() {
+      const title = this.$refs.title.value;
+      const description = this.$refs.desc.value;
+      const link = this.$refs.link.value;
+      if (title.trim() === "" || description.trim() === "" || link.trim() === "") {
+        this.isValidInputs = false;
+        return;
+      }
+
       const res = {
-        title: this.$refs.title.value,
-        description: this.$refs.desc.value,
-        link: this.$refs.link.value,
+        title,
+        description,
+        link,
       };
+
       this.addResource(res);
       this.clearFields();
     },
@@ -52,6 +76,9 @@ export default {
       this.$refs.title.value = "";
       this.$refs.desc.value = "";
       this.$refs.link.value = "";
+    },
+    closeDialog() {
+      this.isValidInputs = true;
     },
   },
 };

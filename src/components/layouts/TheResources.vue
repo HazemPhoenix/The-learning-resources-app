@@ -30,13 +30,11 @@ export default {
       selectedTab: "LearningResources",
       learningResources: [
         {
-          id: 1,
           title: "Vue.js official docs",
           description: "The official documentation for Vue.js",
           link: "https://vuejs.org",
         },
         {
-          id: 2,
           title: "Maxmilian Schwarzmuller Vue.js course",
           description: "The udemy course on Vue.js by Maxmilian Schwarzmuller",
           link: "https://www.udemy.com/course/vuejs-2-the-complete-guide/",
@@ -61,8 +59,7 @@ export default {
       this.selectedTab = tab;
     },
     addResource(resource) {
-      resource.id = this.learningResources.length;
-      this.learningResources.push(resource);
+      this.learningResources.unshift(resource);
     },
   },
 };

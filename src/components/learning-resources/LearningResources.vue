@@ -3,7 +3,7 @@
     <LearningResourcesItem
       v-for="resource in learningResources"
       :item="resource"
-      :key="resource.id"
+      :key="resource.title"
     />
   </ul>
 </template>
