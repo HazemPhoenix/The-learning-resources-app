@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <Teleport to="body">
     <div class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" @click="$emit('close')"></div>
     <dialog
       open
@@ -21,7 +21,7 @@
         <slot name="actions"></slot>
       </menu>
     </dialog>
-  </div>
+  </Teleport>
 </template>
 
 <script>
